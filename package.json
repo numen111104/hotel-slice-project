@@ -1,5 +1,6 @@
 {
   "name": "hotel-slice-project",
+  "type": "module",
   "version": "1.0.0",
   "description": "Frontend slice for hotel website using Tailwind CLI and Alpine.js",
   "scripts": {
@@ -7,6 +8,6 @@
     "build": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --minify"
   },
   "devDependencies": {
-    "tailwindcss": "^3.4.4"
+    "tailwindcss": "^4.1.16"
   }
 }

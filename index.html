@@ -71,7 +71,7 @@
                 <div class="flex items-center space-x-4">
                     <!-- Dark Mode Toggle -->
                     <button @click="darkMode = !darkMode"
-                        class="p-2 rounded-full text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-brand-dark-light focus:outline-none focus:ring-2 focus:ring-primary"
+                        class="p-2 rounded-full text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-brand-dark-light focus:outline-hidden focus:ring-2 focus:ring-primary"
                         aria-label="Toggle dark mode">
                         <!-- Sun Icon (Light Mode) -->
                         <svg x-show="!darkMode" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
@@ -92,7 +92,7 @@
                     <!-- User Avatar Dropdown -->
                     <div class="relative">
                         <button @click="userMenuOpen = !userMenuOpen"
-                            class="block w-10 h-10 rounded-full overflow-hidden border-2 border-primary focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2">
+                            class="block w-10 h-10 rounded-full overflow-hidden border-2 border-primary focus:outline-hidden focus:ring-2 focus:ring-primary focus:ring-offset-2">
                             <img src="https://placehold.co/40x40/F97316/FFFFFF?text=A" alt="User Avatar"
                                 class="w-full h-full object-cover">
                         </button>
@@ -339,7 +339,7 @@
                             <div class="hotel-card-content">
                                 <h3 class="hotel-card-title">Spacious luxury hotel</h3>
                                 <p class="text-sm text-slate-500 dark:text-slate-400">245 reviews</p>
-                                <div class="flex-grow"></div>
+                                <div class="grow"></div>
                                 <div class="hotel-card-footer flex justify-between items-center">
                                     <div class="hotel-card-price">$ 9.87/night</div>
                                     <a href="#" class="btn btn-primary btn-sm px-4 py-2 text-sm">Read More</a>
@@ -354,7 +354,7 @@
                             <div class="hotel-card-content">
                                 <h3 class="hotel-card-title">Natural cool hotel</h3>
                                 <p class="text-sm text-slate-500 dark:text-slate-400">190 reviews</p>
-                                <div class="flex-grow"></div>
+                                <div class="grow"></div>
                                 <div class="hotel-card-footer flex justify-between items-center">
                                     <div class="hotel-card-price">$ 7.87/night</div>
                                     <a href="#" class="btn btn-primary btn-sm px-4 py-2 text-sm">Read More</a>
@@ -369,7 +369,7 @@
                             <div class="hotel-card-content">
                                 <h3 class="hotel-card-title">Mieszkanie plus hotel</h3>
                                 <p class="text-sm text-slate-500 dark:text-slate-400">320 reviews</p>
-                                <div class="flex-grow"></div>
+                                <div class="grow"></div>
                                 <div class="hotel-card-footer flex justify-between items-center">
                                     <div class="hotel-card-price">$ 10.87/night</div>
                                     <a href="#" class="btn btn-primary btn-sm px-4 py-2 text-sm">Read More</a>
@@ -384,7 +384,7 @@
                             <div class="hotel-card-content">
                                 <h3 class="hotel-card-title">Trunk hotel</h3>
                                 <p class="text-sm text-slate-500 dark:text-slate-400">410 reviews</p>
-                                <div class="flex-grow"></div>
+                                <div class="grow"></div>
                                 <div class="hotel-card-footer flex justify-between items-center">
                                     <div class="hotel-card-price">$ 9.87/night</div>
                                     <a href="#" class="btn btn-primary btn-sm px-4 py-2 text-sm">Read More</a>
@@ -399,7 +399,7 @@
                             <div class="hotel-card-content">
                                 <h3 class="hotel-card-title">Edificio Urca hotel</h3>
                                 <p class="text-sm text-slate-500 dark:text-slate-400">295 reviews</p>
-                                <div class="flex-grow"></div>
+                                <div class="grow"></div>
                                 <div class="hotel-card-footer flex justify-between items-center">
                                     <div class="hotel-card-price">$ 9.01/night</div>
                                     <a href="#" class="btn btn-primary btn-sm px-4 py-2 text-sm">Read More</a>
@@ -414,7 +414,7 @@
                             <div class="hotel-card-content">
                                 <h3 class="hotel-card-title">Bravo hotel</h3>
                                 <p class="text-sm text-slate-500 dark:text-slate-400">512 reviews</p>
-                                <div class="flex-grow"></div>
+                                <div class="grow"></div>
                                 <div class="hotel-card-footer flex justify-between items-center">
                                     <div class="hotel-card-price">$ 11.32/night</div>
                                     <a href="#" class="btn btn-primary btn-sm px-4 py-2 text-sm">Read More</a>
@@ -518,13 +518,13 @@
       ----------------
       "Watch Video" Modal
     -->
-        <div x-show="videoModalOpen" class="fixed inset-0 z-[99] flex items-center justify-center p-4" x-cloak>
+        <div x-show="videoModalOpen" class="fixed inset-0 z-99 flex items-center justify-center p-4" x-cloak>
             <!-- Modal Overlay -->
             <div x-show="videoModalOpen" x-transition:enter="fade-enter-active"
                 x-transition:enter-start="fade-enter-from" x-transition:enter-end="fade-leave-to"
                 x-transition:leave="fade-leave-active" x-transition:leave-start="fade-enter-end"
                 x-transition:leave-end="fade-leave-from" @click="videoModalOpen = false"
-                class="absolute inset-0 bg-black/70 backdrop-blur-sm"></div>
+                class="absolute inset-0 bg-black/70 backdrop-blur-xs"></div>
 
             <!-- Modal Content -->
             <div x-show="videoModalOpen" x-transition @click.outside="videoModalOpen = false"
