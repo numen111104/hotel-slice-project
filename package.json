@@ -4,8 +4,8 @@
   "version": "1.0.0",
   "description": "Frontend slice for hotel website using Tailwind CLI and Alpine.js",
   "scripts": {
-    "watch": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
-    "build": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --minify"
+    "watch": "npx @tailwindcss/cli -i ./src/input.css -o ./dist/output.css --watch",
+    "build": "npx @tailwindcss/cli -i ./src/input.css -o ./dist/output.css --minify"
   },
   "devDependencies": {
     "tailwindcss": "^4.1.16"
